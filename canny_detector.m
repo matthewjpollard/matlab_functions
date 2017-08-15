@@ -75,13 +75,13 @@ for ii = 2:(xs-1)
         end
     end
 end
-
 I_suppressed = I_suppressed.*I_grad_mag;
+
 %% Hysteresis Thresholding
 t_low = t_low * max(max(I_suppressed));
 t_high = t_high * max(max(I_suppressed));
 
-I_edges = zeros (xs, ys);
+I_edges = zeros(xs, ys);
 for ii = 1:xs
     for jj = 1:ys
         if (I_suppressed(ii, jj) < t_low)
