@@ -2,7 +2,7 @@ function [I_edges]= canny_detector(I, sigma, g_size, thresholds)
 % This function uses Canny method to find the edges of an image
 % INPUTS:
 %          I: Input image, NxM array grayscale
-%      alpha: standard deviation for gauss filter
+%      sigma: standard deviation for gauss filter
 %     g_size: size of the convolution kernel, int or 1x2 array
 % thresholds: normalized low/high threshold values for use in double threshold, 1x2 array
 %
